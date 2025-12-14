@@ -10,6 +10,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     chaotic.url = "git+https://github.com/lonerOrz/nyx-loner.git";
+    # bad for cache:
+    chaotic.inputs.nixpkgs.follows = "nixpkgs";
+    chaotic.inputs.jovian.follows = "jovian";
     #jovian.follows = "chaotic/jovian";
     jovian = {
       url = "git+https://github.com/Jovian-Experiments/Jovian-NixOS.git";
