@@ -9,7 +9,7 @@
       url = "github:nix-giant/nix-darwin-emacs";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    chaotic.url = "git+https://github.com/chaotic-cx/nyx.git?ref=nyxpkgs-unstable";
+    chaotic.url = "git+https://github.com/lonerOrz/nyx-loner.git";
     #jovian.follows = "chaotic/jovian";
     jovian = {
       url = "git+https://github.com/Jovian-Experiments/Jovian-NixOS.git";
