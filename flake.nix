@@ -251,13 +251,11 @@
                       installPhase = "install -Dm755 example $out";
                     }
                   );
-                  kernel111 = (
-                    pkgs.stdenv.mkDerivation rec {
-                      name = "kernel111-${version}";
-                      version = "1.0";
-                      src = ./.;
+                  kernel1 = (
+                    pkgs.symlinkJoin {
+                      name = "default-linux-kernel-modules";
                       # cache dependencies for those packages:
-                      buildInputs = with pkgs; [
+                      paths = with pkgs; [
                         /*
                           linuxv4gcc.kernel
                           linuxv4gcc.zfs_cachyos
@@ -278,8 +276,6 @@
                         linuxPackages_jovian.kernel
                         linuxPackages_jovian.${pkgs.zfs.kernelModuleAttribute}
                       ];
-                      buildPhase = "echo echo Hello World > example";
-                      installPhase = "install -Dm755 example $out";
                     }
                   );
                 }
