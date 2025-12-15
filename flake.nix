@@ -186,76 +186,83 @@
                   plasma-workspace
                   ;
               })
-              (lib.mkIf (system == "x86_64-linux") (
-                let
-                  linuxv3gcc = (pkgs.linuxPackages_cachyos-gcc.cachyOverride { mArch = "GENERIC_V3"; });
-                  linuxv4gcc = (pkgs.linuxPackages_cachyos-gcc.cachyOverride { mArch = "GENERIC_V4"; });
-                  linuxzen4gcc = (pkgs.linuxPackages_cachyos-gcc.cachyOverride { mArch = "ZEN4"; });
-                  linuxv3 = (pkgs.linuxPackages_cachyos-lto.cachyOverride { mArch = "GENERIC_V3"; });
-                  linuxv4 = (pkgs.linuxPackages_cachyos-lto.cachyOverride { mArch = "GENERIC_V4"; });
-                  linuxzen4 = (pkgs.linuxPackages_cachyos-lto.cachyOverride { mArch = "ZEN4"; });
-                in
-                {
-                  #comfyuinvidia = inputs.nixified-ai.packages."${pkgs.stdenv.hostPlatform.system}".comfyui-nvidia;
-                  inherit (pkgs.pkgsx86_64_v3) systemd;
-                  razer-laptop-control = inputs.razerdaemon.packages.x86_64-linux.default;
-                  inherit
-                    (
-                      pkgs # .jovian-chaotic
-                    )
-                    mesa-radeonsi-jupiter
-                    mesa-radv-jupiter
-                    mesa
-                    inputplumber
-                    wireplumber
-                    ; # gamescope-session; # steamos-manager;
-                  i686s = (
-                    pkgs.symlinkJoin {
-                      name = "i686s";
-                      # cache dependencies for those packages:
-                      paths = with pkgs.pkgsi686Linux; [
-                        mesa-radeonsi-jupiter
-                        mesa-radv-jupiter
-                        gamescope-wsi
-                        kdePackages.qtwayland
-                        mesa
-                        curl
-                        mangohud
-                      ];
-                    }
-                  );
-                  wine = pkgs.wineWowPackages.waylandFull;
-                  inherit (pkgs)
-                    davinci-resolve
-                    steam
-                    lutris
-                    prusa-slicer
-                    android-studio
-                    ryubing
-                    openrazer-daemon
-                    ;
-                  kernel222 = (
-                    pkgs.stdenv.mkDerivation rec {
-                      name = "kernel222-${version}";
-                      version = "1.0";
-                      src = ./.;
-                      # cache dependencies for those packages:
-                      buildInputs = with pkgs; [
+              (lib.mkIf (system == "x86_64-linux") {
+                #comfyuinvidia = inputs.nixified-ai.packages."${pkgs.stdenv.hostPlatform.system}".comfyui-nvidia;
+                inherit (pkgs.pkgsx86_64_v3) systemd;
+                razer-laptop-control = inputs.razerdaemon.packages.x86_64-linux.default;
+                inherit
+                  (
+                    pkgs # .jovian-chaotic
+                  )
+                  mesa-radeonsi-jupiter
+                  mesa-radv-jupiter
+                  mesa
+                  inputplumber
+                  wireplumber
+                  ; # gamescope-session; # steamos-manager;
+                i686s = (
+                  pkgs.symlinkJoin {
+                    name = "i686s";
+                    # cache dependencies for those packages:
+                    paths = with pkgs.pkgsi686Linux; [
+                      mesa-radeonsi-jupiter
+                      mesa-radv-jupiter
+                      gamescope-wsi
+                      kdePackages.qtwayland
+                      mesa
+                      curl
+                      mangohud
+                    ];
+                  }
+                );
+                wine = pkgs.wineWowPackages.waylandFull;
+                inherit (pkgs)
+                  davinci-resolve
+                  steam
+                  lutris
+                  prusa-slicer
+                  android-studio
+                  ryubing
+                  openrazer-daemon
+                  ;
+                kernel2 = (
+                  pkgs.symlinkJoin {
+                    name = "kernel2-linux-kernel-modules";
+                    # cache dependencies for those packages:
+                    paths =
+                      with pkgs;
+                      let
+                        linuxv3gcc = (pkgs.linuxPackages_cachyos-gcc.cachyOverride { mArch = "GENERIC_V3"; });
+                        linuxv4gcc = (pkgs.linuxPackages_cachyos-gcc.cachyOverride { mArch = "GENERIC_V4"; });
+                        linuxzen4gcc = (pkgs.linuxPackages_cachyos-gcc.cachyOverride { mArch = "ZEN4"; });
+                        linuxv3 = (pkgs.linuxPackages_cachyos-lto.cachyOverride { mArch = "GENERIC_V3"; });
+                        linuxv4 = (pkgs.linuxPackages_cachyos-lto.cachyOverride { mArch = "GENERIC_V4"; });
+                        linuxzen4 = (pkgs.linuxPackages_cachyos-lto.cachyOverride { mArch = "ZEN4"; });
+                      in
+                      [
                         linuxv3gcc.kernel
                         linuxv3gcc.zfs_cachyos
                         linuxv3gcc.xone
                         linuxv3gcc.vmware
                         linuxv3gcc.nvidiaPackages.stable
                       ];
-                      buildPhase = "echo echo Hello World > example";
-                      installPhase = "install -Dm755 example $out";
-                    }
-                  );
-                  kernel1 = (
-                    pkgs.symlinkJoin {
-                      name = "default-linux-kernel-modules";
-                      # cache dependencies for those packages:
-                      paths = with pkgs; [
+                  }
+                );
+                kernel1 = (
+                  pkgs.symlinkJoin {
+                    name = "default-linux-kernel-modules";
+                    # cache dependencies for those packages:
+                    paths =
+                      with pkgs;
+                      let
+                        linuxv3gcc = (pkgs.linuxPackages_cachyos-gcc.cachyOverride { mArch = "GENERIC_V3"; });
+                        linuxv4gcc = (pkgs.linuxPackages_cachyos-gcc.cachyOverride { mArch = "GENERIC_V4"; });
+                        linuxzen4gcc = (pkgs.linuxPackages_cachyos-gcc.cachyOverride { mArch = "ZEN4"; });
+                        linuxv3 = (pkgs.linuxPackages_cachyos-lto.cachyOverride { mArch = "GENERIC_V3"; });
+                        linuxv4 = (pkgs.linuxPackages_cachyos-lto.cachyOverride { mArch = "GENERIC_V4"; });
+                        linuxzen4 = (pkgs.linuxPackages_cachyos-lto.cachyOverride { mArch = "ZEN4"; });
+                      in
+                      [
                         /*
                           linuxv4gcc.kernel
                           linuxv4gcc.zfs_cachyos
@@ -276,10 +283,9 @@
                         linuxPackages_jovian.kernel
                         linuxPackages_jovian.${pkgs.zfs.kernelModuleAttribute}
                       ];
-                    }
-                  );
-                }
-              ))
+                  }
+                );
+              })
             ];
           };
       }
