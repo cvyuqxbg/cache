@@ -224,6 +224,7 @@
                   android-studio
                   ryubing
                   openrazer-daemon
+                  gamescope_git
                   ;
                 kernel2 = (
                   pkgs.symlinkJoin {
