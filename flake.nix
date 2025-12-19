@@ -192,7 +192,7 @@
                   ;
               })
               (lib.mkIf (system == "x86_64-linux") {
-                #comfyuinvidia = inputs.nixified-ai.packages."${pkgs.stdenv.hostPlatform.system}".comfyui-nvidia;
+                comfyuinvidia = inputs.nixified-ai.packages."${pkgs.stdenv.hostPlatform.system}".comfyui-nvidia;
                 inherit (pkgs.pkgsx86_64_v3) systemd;
                 razer-laptop-control = inputs.razerdaemon.packages.x86_64-linux.default;
                 inherit
