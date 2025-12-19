@@ -49,6 +49,10 @@
       url = "github:nixified-ai/flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    chester = {
+      url = "git+https://codeberg.org/chester-lang/chester.git";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -160,6 +164,7 @@
                       uv
                       nodejs
                       nodejs_latest
+                      (inputs.chester.packages."${pkgs.stdenv.hostPlatform.system}".default)
                     ];
                   }
                 );
