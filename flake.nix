@@ -29,11 +29,11 @@
     };
     flake-parts.url = "github:hercules-ci/flake-parts";
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixpkgs-25.05-darwin";
-    emacs-overlay = {
-      url = "github:nix-community/emacs-overlay";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.nixpkgs-stable.follows = "nixpkgs-stable";
-    };
+    #emacs-overlay = {
+    #  url = "github:nix-community/emacs-overlay";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #  inputs.nixpkgs-stable.follows = "nixpkgs-stable";
+    #};
     razerdaemon = {
       #url = "github:JosuGZ/razer-laptop-control";
       #url = "git+https://github.com/JosuGZ/razer-laptop-control.git";
@@ -93,13 +93,13 @@
                   [
                     inputs.jovian.overlays.default
                     inputs.chaotic.overlays.default
-                    inputs.emacs-overlay.overlays.package
+                    #inputs.emacs-overlay.overlays.package
                   ]
                 else
                   [
                     inputs.darwin-emacs.overlays.default
                     inputs.chaotic.overlays.default
-                    inputs.emacs-overlay.overlays.package
+                    #inputs.emacs-overlay.overlays.package
                   ]
               );
               config.permittedInsecurePackages = [

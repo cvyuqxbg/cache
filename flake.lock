@@ -92,29 +92,6 @@
         "type": "github"
       }
     },
-    "emacs-overlay": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "nixpkgs-stable": [
-          "nixpkgs-stable"
-        ]
-      },
-      "locked": {
-        "lastModified": 1766195763,
-        "narHash": "sha256-lplNDhZG8lf9o2ZFyOHVxjSnYs4M+bmSbzEhrnNm4LY=",
-        "owner": "nix-community",
-        "repo": "emacs-overlay",
-        "rev": "f4ad950dd72c8eb510de4887d52b620d1fe7a96e",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-community",
-        "repo": "emacs-overlay",
-        "type": "github"
-      }
-    },
     "flake-compat": {
       "locked": {
         "lastModified": 1746162366,
@@ -611,7 +588,6 @@
         "chaotic": "chaotic",
         "chester": "chester",
         "darwin-emacs": "darwin-emacs",
-        "emacs-overlay": "emacs-overlay",
         "flake-parts": "flake-parts",
         "jovian": "jovian",
         "nixified-ai": "nixified-ai",
