@@ -178,7 +178,7 @@
                   obsidian
                   gamescope
                   gnome-calendar
-                  chromium
+                  #chromium
                   aseprite
                   wiliwili
                   #krdp
