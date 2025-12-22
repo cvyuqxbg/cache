@@ -127,7 +127,7 @@
                   zed-editor
                   #emacs-unstable
                   emacs-30
-                  firefox_nightly
+                  #firefox_nightly
                   element-desktop
                   remmina
                   librewolf
