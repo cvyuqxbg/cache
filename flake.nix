@@ -230,6 +230,7 @@
                   ryubing
                   openrazer-daemon
                   gamescope_git
+                  ollama-cuda
                   ;
                 kernel2 = (
                   pkgs.symlinkJoin {
