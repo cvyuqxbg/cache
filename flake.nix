@@ -222,7 +222,7 @@
                 );
                 wine = pkgs.wineWowPackages.waylandFull;
                 inherit (pkgs)
-                  davinci-resolve
+                  #davinci-resolve
                   steam
                   lutris
                   prusa-slicer
