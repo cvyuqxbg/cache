@@ -231,6 +231,7 @@
                   openrazer-daemon
                   gamescope_git
                   ollama-cuda
+                  android-translation-layer
                   ;
                 kernel2 = (
                   pkgs.symlinkJoin {
