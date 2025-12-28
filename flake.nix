@@ -232,6 +232,7 @@
                   gamescope_git
                   ollama-cuda
                   android-translation-layer
+                  retroarch-full
                   ;
                 kernel2 = (
                   pkgs.symlinkJoin {
