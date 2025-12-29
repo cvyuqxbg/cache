@@ -199,7 +199,18 @@
               (lib.mkIf (system == "x86_64-linux") {
                 inherit (pkgs-cuda) opencv;
                 comfyuinvidia = inputs.nixified-ai.packages."${pkgs.stdenv.hostPlatform.system}".comfyui-nvidia;
-                inherit (pkgs.pkgsx86_64_v3) systemd;
+                v3ssss = (
+                  pkgs.symlinkJoin {
+                    name = "v3ssss";
+                    # cache dependencies for those packages:
+                    paths = with pkgs.pkgsx86_64_v3; [
+                      systemd
+                      tmux
+                      nano
+                      dbus
+                    ];
+                  }
+                );
                 razer-laptop-control = inputs.razerdaemon.packages.x86_64-linux.default;
                 inherit
                   (
