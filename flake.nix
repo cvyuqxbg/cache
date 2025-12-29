@@ -121,6 +121,9 @@
               inherit system;
               config.allowUnfree = true;
               config.cudaSupport = true;
+              overlays = ([
+                inputs.chaotic.overlays.default
+              ]);
             };
             lib = inputs.nixpkgs.lib;
             epkgs = pkgs.emacsPackagesFor pkgs.emacs-30;
@@ -209,6 +212,20 @@
                       nano
                       dbus
                       kdePackages.sddm
+                    ];
+                  }
+                );
+                v3sssscuda = (
+                  pkgs.symlinkJoin {
+                    name = "v3sssscuda";
+                    # cache dependencies for those packages:
+                    paths = with pkgs-cuda.pkgsx86_64_v3; [
+                      systemd
+                      tmux
+                      nano
+                      dbus
+                      kdePackages.sddm
+                      nix
                     ];
                   }
                 );
