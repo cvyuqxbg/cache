@@ -117,6 +117,11 @@
                 "jitsi-meet-1.0.8792" # for element-desktop - see https://github.com/NixOS/nixpkgs/pull/426541
               ];
             };
+            pkgs-cuda = import inputs.nixpkgs {
+              inherit system;
+              config.allowUnfree = true;
+              config.cudaSupport = true;
+            };
             lib = inputs.nixpkgs.lib;
             epkgs = pkgs.emacsPackagesFor pkgs.emacs-30;
           in
@@ -192,6 +197,7 @@
                   ;
               })
               (lib.mkIf (system == "x86_64-linux") {
+                inherit (pkgs-cuda) opencv;
                 comfyuinvidia = inputs.nixified-ai.packages."${pkgs.stdenv.hostPlatform.system}".comfyui-nvidia;
                 inherit (pkgs.pkgsx86_64_v3) systemd;
                 razer-laptop-control = inputs.razerdaemon.packages.x86_64-linux.default;
