@@ -211,7 +211,8 @@
                       tmux
                       nano
                       dbus
-                      kdePackages.sddm
+                      pipewire
+                      openssh
                     ];
                   }
                 );
@@ -224,7 +225,8 @@
                       tmux
                       nano
                       dbus
-                      kdePackages.sddm
+                      pipewire
+                      openssh
                     ];
                   }
                 );
