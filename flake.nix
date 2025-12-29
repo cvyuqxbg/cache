@@ -226,20 +226,26 @@
                     ];
                   }
                 );
-                wine = pkgs.wineWowPackages.waylandFull;
-                inherit (pkgs)
-                  #davinci-resolve
-                  steam
-                  lutris
-                  prusa-slicer
-                  android-studio
-                  ryubing
-                  openrazer-daemon
-                  gamescope_git
-                  ollama-cuda
-                  android-translation-layer
-                  retroarch-full
-                  ;
+                packagessss = (
+                  pkgs.symlinkJoin {
+                    name = "packagessss";
+                    # cache dependencies for those packages:
+                    paths = with pkgs; [
+                      #davinci-resolve
+                      steam
+                      lutris
+                      prusa-slicer
+                      android-studio
+                      ryubing
+                      openrazer-daemon
+                      gamescope_git
+                      ollama-cuda
+                      android-translation-layer
+                      retroarch-full
+                      wineWowPackages.waylandFull
+                    ];
+                  }
+                );
                 kernel2 = (
                   pkgs.symlinkJoin {
                     name = "kernel2-linux-kernel-modules";
