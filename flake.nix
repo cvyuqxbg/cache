@@ -208,6 +208,7 @@
                       tmux
                       nano
                       dbus
+                      kdePackages.sddm
                     ];
                   }
                 );
