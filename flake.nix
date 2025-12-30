@@ -211,6 +211,7 @@
                       systemd
                       tmux
                       nano
+                      bluez
                       dbus
                       networkmanager
                       polkit
@@ -229,6 +230,7 @@
                       tmux
                       nano
                       dbus
+                      bluez
                       networkmanager
                       polkit
                       power-profiles-daemon
