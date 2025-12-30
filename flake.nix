@@ -207,11 +207,14 @@
                     name = "v3ssss";
                     # cache dependencies for those packages:
                     paths = with pkgs.pkgsx86_64_v3; [
+                      nix
                       systemd
                       tmux
                       nano
                       dbus
-                      pipewire
+                      networkmanager
+                      polkit
+                      power-profiles-daemon
                       openssh
                     ];
                   }
@@ -221,11 +224,14 @@
                     name = "v3sssscuda";
                     # cache dependencies for those packages:
                     paths = with pkgs-cuda.pkgsx86_64_v3; [
+                      nix
                       systemd
                       tmux
                       nano
                       dbus
-                      pipewire
+                      networkmanager
+                      polkit
+                      power-profiles-daemon
                       openssh
                     ];
                   }
