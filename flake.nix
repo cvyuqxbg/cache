@@ -172,10 +172,10 @@
                       uv
                       nodejs
                       nodejs_latest
-                      (inputs.chester.packages."${pkgs.stdenv.hostPlatform.system}".default)
                     ];
                   }
                 );
+                chester = (inputs.chester.packages."${pkgs.stdenv.hostPlatform.system}".default);
                 #inherit (pkgs) thunderbird-esr; # jellyfin-media-player
                 inherit (pkgs.emacs.pkgs) magit nix-mode agda2-mode;
               }
