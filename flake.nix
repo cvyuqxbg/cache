@@ -264,12 +264,22 @@
                     ];
                   }
                 );
+                packagesssscuda = (
+                  pkgs.symlinkJoin {
+                    name = "packagesssscuda";
+                    # cache dependencies for those packages:
+                    paths = with pkgs-cuda; [
+                      davinci-resolve
+                      retroarch-full
+                    ];
+                  }
+                );
                 packagessss = (
                   pkgs.symlinkJoin {
                     name = "packagessss";
                     # cache dependencies for those packages:
                     paths = with pkgs; [
-                      #davinci-resolve
+                      davinci-resolve
                       steam
                       lutris
                       prusa-slicer
