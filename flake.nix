@@ -330,10 +330,10 @@
                           linuxv4gcc.nvidiaPackages.stable.open
                           linuxv3.kernel
                           linuxv4.kernel
-                          linuxzen4.kernel
-                          linuxzen4.zfs_cachyos
-                          linuxzen4.nvidiaPackages.stable.open
                         */
+                        linuxzen4.kernel
+                        linuxzen4.zfs_cachyos
+                        linuxzen4.nvidiaPackages.stable.open
                         linuxzen4gcc.kernel
                         linuxzen4gcc.zfs_cachyos
                         linuxzen4gcc.xone
