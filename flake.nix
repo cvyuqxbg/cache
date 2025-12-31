@@ -304,6 +304,7 @@
                         linuxv3gcc.xone
                         linuxv3gcc.vmware
                         linuxv3gcc.nvidiaPackages.stable.open
+                        linuxv3.kernel
                       ];
                   }
                 );
@@ -328,7 +329,6 @@
                           linuxv4gcc.xone
                           linuxv4gcc.vmware
                           linuxv4gcc.nvidiaPackages.stable.open
-                          linuxv3.kernel
                           linuxv4.kernel
                         */
                         linuxzen4.kernel
