@@ -30,6 +30,12 @@ jobs:
           - nixpkgs=https://github.com/NixOS/nixpkgs/archive/refs/heads/nixos-unstable.tar.gz
     runs-on: "${{ matrix.os }}"
     steps:
+    - run: sudo sysctl kernel.apparmor_restrict_unprivileged_userns=0
+      if: runner.os == 'Linux'
+    - run: sudo sysctl kernel.apparmor_restrict_unprivileged_unconfined=0
+      if: runner.os == 'Linux'
+    - run: sudo sysctl kernel.unprivileged_userns_clone=1
+      if: runner.os == 'Linux'
     - name: Maximize build space
       if: runner.os == 'Linux'
       uses: mio-19/maximize-build-space@patch-1
