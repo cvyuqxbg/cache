@@ -271,6 +271,7 @@
                     paths = with pkgs-cuda; [
                       davinci-resolve
                       retroarch-full
+                      krita
                     ];
                   }
                 );
@@ -291,6 +292,7 @@
                       android-translation-layer
                       retroarch-full
                       wineWowPackages.waylandFull
+                      krita
                     ];
                   }
                 );
