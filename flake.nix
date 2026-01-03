@@ -218,6 +218,7 @@
                       power-profiles-daemon
                       openssh
                       plymouth
+                      iwd
                     ];
                   }
                 );
@@ -237,6 +238,7 @@
                       power-profiles-daemon
                       openssh
                       plymouth
+                      iwd
                     ];
                   }
                 );
