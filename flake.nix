@@ -217,6 +217,7 @@
                       polkit
                       power-profiles-daemon
                       openssh
+                      plymouth
                     ];
                   }
                 );
@@ -235,6 +236,7 @@
                       polkit
                       power-profiles-daemon
                       openssh
+                      plymouth
                     ];
                   }
                 );
