@@ -277,6 +277,7 @@
                       retroarch-full
                       krita
                       nix
+                      nixd
                     ];
                   }
                 );
