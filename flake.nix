@@ -276,6 +276,7 @@
                       davinci-resolve
                       retroarch-full
                       krita
+                      nix
                     ];
                   }
                 );
