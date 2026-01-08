@@ -278,6 +278,7 @@
                       krita
                       nix
                       nixd
+                      pixelorama
                     ];
                   }
                 );
@@ -299,6 +300,7 @@
                       retroarch-full
                       wineWowPackages.waylandFull
                       krita
+                      pixelorama
                     ];
                   }
                 );
