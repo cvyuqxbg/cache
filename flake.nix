@@ -319,11 +319,13 @@
                         linuxzen4 = (pkgs.linuxPackages_cachyos-lto.cachyOverride { mArch = "ZEN4"; });
                       in
                       [
-                        linuxv3gcc.kernel
-                        linuxv3gcc.zfs_cachyos
-                        linuxv3gcc.xone
-                        linuxv3gcc.vmware
-                        linuxv3gcc.nvidiaPackages.stable.open
+                        /*
+                          linuxv3gcc.kernel
+                          linuxv3gcc.zfs_cachyos
+                          linuxv3gcc.xone
+                          linuxv3gcc.vmware
+                          linuxv3gcc.nvidiaPackages.stable.open
+                        */
                         linuxv3.kernel
                       ];
                   }
@@ -354,11 +356,13 @@
                         linuxzen4.kernel
                         linuxzen4.zfs_cachyos
                         linuxzen4.nvidiaPackages.stable.open
-                        linuxzen4gcc.kernel
-                        linuxzen4gcc.zfs_cachyos
-                        linuxzen4gcc.xone
-                        linuxzen4gcc.vmware
-                        linuxzen4gcc.nvidiaPackages.stable.open
+                        /*
+                          linuxzen4gcc.kernel
+                          linuxzen4gcc.zfs_cachyos
+                          linuxzen4gcc.xone
+                          linuxzen4gcc.vmware
+                          linuxzen4gcc.nvidiaPackages.stable.open
+                        */
                         linuxPackages_jovian.kernel
                         linuxPackages_jovian.${pkgs.zfs.kernelModuleAttribute}
                       ];
