@@ -319,8 +319,8 @@
                         linuxzen4 = (pkgs.linuxPackages_cachyos-lto.cachyOverride { mArch = "ZEN4"; });
                       in
                       [
+                        linuxv3gcc.kernel
                         /*
-                          linuxv3gcc.kernel
                           linuxv3gcc.zfs_cachyos
                           linuxv3gcc.xone
                           linuxv3gcc.vmware
