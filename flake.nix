@@ -287,6 +287,7 @@
                     name = "packagessss";
                     # cache dependencies for those packages:
                     paths = with pkgs; [
+                      gitbutler
                       davinci-resolve
                       steam
                       lutris
