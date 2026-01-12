@@ -279,6 +279,8 @@
                       nix
                       nixd
                       pixelorama
+                      zeroad
+                      vdrift
                     ];
                   }
                 );
