@@ -148,6 +148,7 @@
                   epkgs.magit
                   epkgs.agda2-mode
                 ];
+                lix = pkgs.lixPackageSets.stable.lix;
               })
               {
                 universal = (
