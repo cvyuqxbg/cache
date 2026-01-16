@@ -173,6 +173,7 @@
                       uv
                       nodejs
                       nodejs_latest
+                      p7zip-rar
                     ];
                   }
                 );
