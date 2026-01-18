@@ -154,7 +154,7 @@
                 universal = (
                   pkgs.symlinkJoin {
                     name = "universal";
-                    # cache dependencies for those packages:
+                    
                     paths = with pkgs; [
                       musescore
                       audacity
@@ -207,7 +207,7 @@
                 v3ssss = (
                   pkgs.symlinkJoin {
                     name = "v3ssss";
-                    # cache dependencies for those packages:
+                    
                     paths = with pkgs.pkgsx86_64_v3; [
                       nix
                       systemd
@@ -227,7 +227,7 @@
                 v3sssscuda = (
                   pkgs.symlinkJoin {
                     name = "v3sssscuda";
-                    # cache dependencies for those packages:
+                    
                     paths = with pkgs-cuda.pkgsx86_64_v3; [
                       nix
                       systemd
@@ -258,7 +258,7 @@
                 i686s = (
                   pkgs.symlinkJoin {
                     name = "i686s";
-                    # cache dependencies for those packages:
+                    
                     paths = with pkgs.pkgsi686Linux; [
                       mesa-radeonsi-jupiter
                       mesa-radv-jupiter
@@ -273,7 +273,7 @@
                 packagesssscuda = (
                   pkgs.symlinkJoin {
                     name = "packagesssscuda";
-                    # cache dependencies for those packages:
+                    
                     paths = with pkgs-cuda; [
                       davinci-resolve
                       retroarch-full
@@ -289,7 +289,7 @@
                 packagessss = (
                   pkgs.symlinkJoin {
                     name = "packagessss";
-                    # cache dependencies for those packages:
+                    
                     paths = with pkgs; [
                       gitbutler
                       davinci-resolve
@@ -306,13 +306,14 @@
                       wineWowPackages.waylandFull
                       krita
                       pixelorama
+                      flightgear 
                     ];
                   }
                 );
                 kernel2 = (
                   pkgs.symlinkJoin {
                     name = "kernel2-linux-kernel-modules";
-                    # cache dependencies for those packages:
+                    
                     paths =
                       with pkgs;
                       let
@@ -338,7 +339,7 @@
                 kernel1 = (
                   pkgs.symlinkJoin {
                     name = "default-linux-kernel-modules";
-                    # cache dependencies for those packages:
+                    
                     paths =
                       with pkgs;
                       let
