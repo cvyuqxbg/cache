@@ -292,7 +292,7 @@
                     
                     paths = with pkgs; [
                       gitbutler
-                      davinci-resolve
+                      #davinci-resolve
                       steam
                       lutris
                       prusa-slicer
