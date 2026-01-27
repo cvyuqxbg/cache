@@ -424,11 +424,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1769126487,
-        "narHash": "sha256-OA+Qrrf0FWqARjgJASGrPKMUw237G3gYG+MQn4upABU=",
+        "lastModified": 1769538514,
+        "narHash": "sha256-/3Hk9YEI+9vA2+4AFErByc1V3LcCDNThmXYhFWlkQiU=",
         "owner": "nix-community",
         "repo": "nixos-apple-silicon",
-        "rev": "003afbd7b4f90c83497906ba2e9099874c2e3a4f",
+        "rev": "749992a1cd11092ac9eea8a05fb953f591df59db",
         "type": "github"
       },
       "original": {
@@ -439,11 +439,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1769534865,
-        "narHash": "sha256-6TyYQWNQt3gBdtUBplV4CyTSD3DC/qN+KMmdpmPgA6E=",
+        "lastModified": 1769538724,
+        "narHash": "sha256-q5cnoCHQJJCN1vf9HdA+MxXyslnjsJljbL9tF1BUdOw=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "073d0f4c263d5eef4fd249c2054506b214119918",
+        "rev": "a165ec5812397c678bf9c029bda5fabb9225d304",
         "type": "github"
       },
       "original": {
@@ -486,11 +486,11 @@
     },
     "nixpkgs-staging": {
       "locked": {
-        "lastModified": 1769524865,
-        "narHash": "sha256-7DPmgF0E70k5+NrbLeTKSzI7+x1oWHj+xkmo9K/ns/s=",
+        "lastModified": 1769539079,
+        "narHash": "sha256-+09bOB8nMqWUnr4hU77CShP/OyAGehJLdVAlZoviKN0=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "f93b00f6e6b242fed19f50bd818a5ef924f8c1f7",
+        "rev": "a5b50d31e0fd60227495ad2b2760cbda3581ec77",
         "type": "github"
       },
       "original": {
@@ -524,11 +524,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1769534278,
-        "narHash": "sha256-FNvpcUZt5r5LDG2HYDIJIso1gRr/yPSYWjigsIyqQqA=",
+        "lastModified": 1769538966,
+        "narHash": "sha256-mIxP86wZnOtarw1YxqaO2gKPezYOv2U+4DQ3D/vLlWA=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "0fec4b22b30ee0517fe3c0778cf306438204804f",
+        "rev": "a3802f288dbcda24ee0d3dd42260d73a041972ad",
         "type": "github"
       },
       "original": {
