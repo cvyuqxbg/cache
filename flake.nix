@@ -284,7 +284,7 @@
                       nixd
                       pixelorama
                       zeroad
-                      vdrift
+                      #vdrift
                     ];
                   }
                 );
