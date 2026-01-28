@@ -192,6 +192,7 @@
                   aseprite
                   wiliwili
                   #krdp
+                  freecad
                   ;
                 inherit (pkgs.kdePackages)
                   kwin
@@ -241,6 +242,7 @@
                       openssh
                       plymouth
                       iwd
+                      freecad
                     ];
                   }
                 );
