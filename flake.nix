@@ -247,7 +247,6 @@
                       openssh
                       plymouth
                       iwd
-                      freecad
                     ];
                   }
                 );
