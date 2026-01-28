@@ -130,7 +130,7 @@
           in
           {
             packages = lib.mkMerge [
-              (lib.mkIf (pkgs.stdenv.isDarwin) {
+              (lib.mkIf (pkgs.stdenv.isDarwin && pkgs.stdenv.hostPlatform.isAarch64) {
                 inherit (pkgs)
                   #zed-editor
                   #emacs-unstable
