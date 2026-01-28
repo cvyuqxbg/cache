@@ -208,7 +208,7 @@
                   ;
               })
               (lib.mkIf (system == "x86_64-linux") {
-                inherit (pkgs-cuda) opencv;
+                inherit (pkgs-cuda) opencv freecad;
                 #comfyuinvidia = inputs.nixified-ai.packages."${pkgs.stdenv.hostPlatform.system}".comfyui-nvidia;
                 v3ssss = (
                   pkgs.symlinkJoin {
