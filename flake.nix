@@ -159,7 +159,7 @@
                 universal = (
                   pkgs.symlinkJoin {
                     name = "universal";
-                    
+
                     paths = with pkgs; [
                       musescore
                       audacity
@@ -208,12 +208,11 @@
                   ;
               })
               (lib.mkIf (system == "x86_64-linux") {
-                inherit (pkgs-cuda) opencv freecad;
                 #comfyuinvidia = inputs.nixified-ai.packages."${pkgs.stdenv.hostPlatform.system}".comfyui-nvidia;
                 v3ssss = (
                   pkgs.symlinkJoin {
                     name = "v3ssss";
-                    
+
                     paths = with pkgs.pkgsx86_64_v3; [
                       nix
                       systemd
@@ -233,7 +232,7 @@
                 v3sssscuda = (
                   pkgs.symlinkJoin {
                     name = "v3sssscuda";
-                    
+
                     paths = with pkgs-cuda.pkgsx86_64_v3; [
                       nix
                       systemd
@@ -264,7 +263,7 @@
                 i686s = (
                   pkgs.symlinkJoin {
                     name = "i686s";
-                    
+
                     paths = with pkgs.pkgsi686Linux; [
                       mesa-radeonsi-jupiter
                       mesa-radv-jupiter
@@ -279,7 +278,7 @@
                 packagesssscuda = (
                   pkgs.symlinkJoin {
                     name = "packagesssscuda";
-                    
+
                     paths = with pkgs-cuda; [
                       davinci-resolve
                       retroarch-full
@@ -289,13 +288,15 @@
                       pixelorama
                       zeroad
                       #vdrift
+                      opencv
+                      freecad
                     ];
                   }
                 );
                 packagessss = (
                   pkgs.symlinkJoin {
                     name = "packagessss";
-                    
+
                     paths = with pkgs; [
                       gitbutler
                       #davinci-resolve
@@ -312,14 +313,14 @@
                       wineWowPackages.waylandFull
                       krita
                       pixelorama
-                      flightgear 
+                      flightgear
                     ];
                   }
                 );
                 kernel2 = (
                   pkgs.symlinkJoin {
                     name = "kernel2-linux-kernel-modules";
-                    
+
                     paths =
                       with pkgs;
                       let
@@ -345,7 +346,7 @@
                 kernel1 = (
                   pkgs.symlinkJoin {
                     name = "default-linux-kernel-modules";
-                    
+
                     paths =
                       with pkgs;
                       let
