@@ -130,6 +130,11 @@
           in
           {
             packages = lib.mkMerge [
+              (lib.mkIf pkgs.stdenv.isDarwin {
+                inherit (pkgs)
+                  lix
+                  ;
+              })
               (lib.mkIf (pkgs.stdenv.isDarwin && pkgs.stdenv.hostPlatform.isAarch64) {
                 inherit (pkgs)
                   #zed-editor
@@ -148,7 +153,7 @@
                   epkgs.magit
                   epkgs.agda2-mode
                 ];
-                lix = pkgs.lixPackageSets.stable.lix;
+                #lix_stable = pkgs.lixPackageSets.stable.lix;
               })
               {
                 universal = (
