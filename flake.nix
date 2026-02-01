@@ -53,6 +53,10 @@
       url = "git+https://codeberg.org/chester-lang/chester.git";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-gaming = {
+      url = "github:fufexan/nix-gaming";
+      inputs.flake-parts.follows = "nur/flake-parts";
+    };
   };
 
   outputs =
@@ -208,6 +212,7 @@
                   ;
               })
               (lib.mkIf (system == "x86_64-linux") {
+                wine64_package = inputs.nix-gaming.packages.${pkgs.stdenv.hostPlatform.system}.wine-tkg;
                 #comfyuinvidia = inputs.nixified-ai.packages."${pkgs.stdenv.hostPlatform.system}".comfyui-nvidia;
                 v3ssss = (
                   pkgs.symlinkJoin {

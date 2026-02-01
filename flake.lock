@@ -372,6 +372,28 @@
         "url": "https://github.com/Jovian-Experiments/Jovian-NixOS.git"
       }
     },
+    "nix-gaming": {
+      "inputs": {
+        "flake-parts": [
+          "nur",
+          "flake-parts"
+        ],
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1769914377,
+        "narHash": "sha256-8wH3ZYNs36V0A3f/ikraqdoVE++BfnXg9Ql8nAuUkHw=",
+        "owner": "fufexan",
+        "repo": "nix-gaming",
+        "rev": "f7d17740ed90663b11ae907d33b3fed9fc9e15a9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "fufexan",
+        "repo": "nix-gaming",
+        "type": "github"
+      }
+    },
     "nix-github-actions": {
       "inputs": {
         "nixpkgs": [
@@ -439,16 +461,16 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1769914019,
-        "narHash": "sha256-w3TySosUsTuVdWAoHEVxvPIX42lCv/98Rmt5LRu3Bw8=",
+        "lastModified": 1769740369,
+        "narHash": "sha256-xKPyJoMoXfXpDM5DFDZDsi9PHArf2k5BJjvReYXoFpM=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "17317ace7fb805f192bcf5595e41d18b09f9b497",
+        "rev": "6308c3b21396534d8aaeac46179c14c439a89b8a",
         "type": "github"
       },
       "original": {
         "owner": "NixOS",
-        "ref": "master",
+        "ref": "nixpkgs-unstable",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -501,6 +523,22 @@
       }
     },
     "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1769914019,
+        "narHash": "sha256-w3TySosUsTuVdWAoHEVxvPIX42lCv/98Rmt5LRu3Bw8=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "17317ace7fb805f192bcf5595e41d18b09f9b497",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "master",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_3": {
       "locked": {
         "lastModified": 1761907660,
         "narHash": "sha256-kJ8lIZsiPOmbkJypG+B5sReDXSD1KGu2VEPNqhRa/ew=",
@@ -590,9 +628,10 @@
         "darwin-emacs": "darwin-emacs",
         "flake-parts": "flake-parts",
         "jovian": "jovian",
+        "nix-gaming": "nix-gaming",
         "nixified-ai": "nixified-ai",
         "nixos-apple-silicon": "nixos-apple-silicon",
-        "nixpkgs": "nixpkgs",
+        "nixpkgs": "nixpkgs_2",
         "nixpkgs-stable": "nixpkgs-stable",
         "nixpkgs-staging": "nixpkgs-staging",
         "nur": "nur",
@@ -605,7 +644,7 @@
       "inputs": {
         "flake-compat": "flake-compat_2",
         "flake-utils": "flake-utils_4",
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs_3"
       },
       "locked": {
         "lastModified": 1763511723,
