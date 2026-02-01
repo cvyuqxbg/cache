@@ -183,6 +183,7 @@
                       nodejs
                       nodejs_latest
                       p7zip-rar
+                      fresh-editor
                     ];
                   }
                 );
